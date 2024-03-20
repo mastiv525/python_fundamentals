@@ -71,7 +71,12 @@ else:
 age = 22
 if age >= 18 and age <65:
 # if 1 <= age < 65:     <- much better
-    print("Eligible")
+    print(f"Eligible \n")
 
 # for loops
+for number in range(1, 4):
+    print("Attempt", number, number * ".")
+
+for number in range(1, 10, 2):
+    print("Attempt", number, number * ".")
 
