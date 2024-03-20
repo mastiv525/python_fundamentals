@@ -68,3 +68,10 @@ else:
 
 #chaining comparison
 
+age = 22
+if age >= 18 and age <65:
+# if 1 <= age < 65:     <- much better
+    print("Eligible")
+
+# for loops
+
