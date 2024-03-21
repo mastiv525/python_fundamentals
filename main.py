@@ -112,15 +112,21 @@ while number > 0:
     print(number)
     number //=2
 
-command = ""
-while command != "quit":
-    command = input(">")
-    print("Echo", command)
+# command = ""
+# while command != "quit":
+#     command = input(">")
+#     print("Echo", command)
+#
+# # infinite loops
+#
+# while True:
+#     command = input(">")
+#     print("ECHO", command)
+#     if command.lower() == "quit":
+#         break
 
-# infinite loops
+# exercise display even numbers
 
-while True:
-    command = input(">")
-    print("ECHO", command)
-    if command.lower() == "quit":
-        break
+for x in range(1, 10):
+    if x % 2 == 0:
+        print(x)
