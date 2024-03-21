@@ -96,3 +96,11 @@ else:
 for x in range(5):
     for y in range(3):
         print(f"({x}, {y})")
+
+# iterables
+
+for x in "\nPython\n":
+    print(x)
+
+for x in [1, 2, 4, 6, 8, 15]:
+    print(x)
