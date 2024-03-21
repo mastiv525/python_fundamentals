@@ -116,3 +116,11 @@ command = ""
 while command != "quit":
     command = input(">")
     print("Echo", command)
+
+# infinite loops
+
+while True:
+    command = input(">")
+    print("ECHO", command)
+    if command.lower() == "quit":
+        break
