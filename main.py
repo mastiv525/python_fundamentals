@@ -104,3 +104,15 @@ for x in "\nPython\n":
 
 for x in [1, 2, 4, 6, 8, 15]:
     print(x)
+
+# while loops
+
+number = 100
+while number > 0:
+    print(number)
+    number //=2
+
+command = ""
+while command != "quit":
+    command = input(">")
+    print("Echo", command)
