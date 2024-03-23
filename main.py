@@ -135,6 +135,11 @@ for x in range(1, 10):
 
 def basic():
     print("Hello")
-    print("World!")
+    print("World!\n")
 
 basic()
+
+def example(first_name, last_name):
+    print(f"Hi {first_name} {last_name}\nWelcome aboard!")
+
+example("Alan", "Lekki")
