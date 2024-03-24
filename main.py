@@ -143,3 +143,10 @@ def example(first_name, last_name):
     print(f"Hi {first_name} {last_name}\nWelcome aboard!")
 
 example("Alan", "Lekki")
+
+def better_example(first_name, last_name):
+    return f"Hi {first_name}{last_name}"
+
+future = better_example("Alan", "Lekki")
+# this function is much better for future usage, because we return not print which is easier
+
