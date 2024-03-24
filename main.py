@@ -150,3 +150,8 @@ def better_example(first_name, last_name):
 future = better_example("Alan", "Lekki")
 # this function is much better for future usage, because we return not print which is easier
 
+def increment(number, by):
+    return number + by
+
+print(increment(2, 1))
+print(increment(2, by=2))
