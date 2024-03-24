@@ -156,6 +156,22 @@ def increment(number, by):
 print(increment(2, 1))
 print(increment(2, by=2))
 
-def increment_v2(number, by=2):
-    return number + by
-print(increment(2))
+# def increment_v2(number, by=2):
+#     return number + by
+# print(increment(2))
+
+# x number of arg
+
+def multiply(*numbers):
+    total = 1
+    for number in numbers:
+        total *= number
+    return total
+
+print(multiply(2,3, 4, 5))
+
+# multiple x key value pairs arguments because of **
+def save_user(**user):
+    print(user)
+    print(user["name"])
+save_user(id=1, name="Alan", age=22)
