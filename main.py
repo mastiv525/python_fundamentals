@@ -155,3 +155,7 @@ def increment(number, by):
 
 print(increment(2, 1))
 print(increment(2, by=2))
+
+def increment_v2(number, by=2):
+    return number + by
+print(increment(2))
