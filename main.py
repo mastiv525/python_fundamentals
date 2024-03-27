@@ -208,3 +208,11 @@ numbers = list(range(20))
 print(numbers[0:3])
 print(numbers[::2])
 print(numbers[::-1])
+print(" ")
+
+#list unpacking
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+first, second, third, *other = numbers
+print(first, second, third)
+print(other)
