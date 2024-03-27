@@ -199,3 +199,12 @@ print(chars)
 
 print(len(numb))
 print(len(chars))
+print(" ")
+
+# accessing items
+
+numbers = list(range(20))
+
+print(numbers[0:3])
+print(numbers[::2])
+print(numbers[::-1])
