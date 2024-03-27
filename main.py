@@ -168,10 +168,34 @@ def multiply(*numbers):
         total *= number
     return total
 
-print(multiply(2,3, 4, 5))
+print(multiply(2 ,3 , 4, 5))
 
 # multiple x key value pairs arguments because of **
 def save_user(**user):
     print(user)
     print(user["name"])
 save_user(id=1, name="Alan", age=22)
+
+
+# DATA STRUCTURES
+
+letters = ['a', 'b', 'c']
+matrix = [[0, 1], [0, 1]]
+zeros = [0] * 5
+
+print(letters)
+print(matrix)
+print(zeros)
+
+combined = zeros + letters
+
+print(combined)
+
+numb = list(range(20))
+print(numb)
+
+chars = list("Hello World")
+print(chars)
+
+print(len(numb))
+print(len(chars))
