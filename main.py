@@ -215,4 +215,26 @@ print(" ")
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 first, second, third, *other = numbers
 print(first, second, third)
-print(other)
+print(f'{other}\n')
+
+for index, numbers in enumerate(numbers):
+    print(index, letters)
+
+#adding items
+
+letters.append("d")
+letters.insert(0, "z")
+print(f'{letters}\n')
+
+#removing
+
+letters.pop(0)
+letters.append("b")
+print(letters)
+letters.remove("b")
+print(letters)
+del letters[0:3]
+print(letters)
+letters.clear()
+print(letters)
+
