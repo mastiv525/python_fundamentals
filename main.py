@@ -238,3 +238,26 @@ print(letters)
 letters.clear()
 print(letters)
 
+#sorting lists
+
+numbers = [10, 5, 79, 741, 226]
+
+print(numbers.sort())
+print(numbers.sort(reverse=True))
+#better
+print(sorted(numbers))
+print(sorted(numbers, reverse=True))
+
+items = [
+    ("Product", 10),
+    ("Product", 9),
+    ("Product", 12)
+]
+def sort_item(item):
+    return item[1]
+
+items.sort(key=sort_item)
+print(items)
+
+
+
