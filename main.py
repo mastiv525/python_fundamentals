@@ -253,11 +253,17 @@ items = [
     ("Product", 9),
     ("Product", 12)
 ]
-def sort_item(item):
-    return item[1]
+# def sort_item(item):
+#     return item[1]
+#
+# items.sort(key=sort_item)
+# print(items)
 
-items.sort(key=sort_item)
+#lambdas key=lambda parameters:expression
+
+items.sort(key=lambda item:item[1])
 print(items)
 
+# this is a shorter and cleaner way to define a function that we're going to use only once as an argument to another function
 
 
