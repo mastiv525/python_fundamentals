@@ -253,17 +253,33 @@ items = [
     ("Product", 9),
     ("Product", 12)
 ]
-# def sort_item(item):
-#     return item[1]
-#
-# items.sort(key=sort_item)
-# print(items)
+def sort_item(item):
+    return item[1]
+
+items.sort(key=sort_item)
+print(items)
 
 #lambdas key=lambda parameters:expression
 
 items.sort(key=lambda item:item[1])
 print(items)
 
-# this is a shorter and cleaner way to define a function that we're going to use only once as an argument to another function
+#<- this is a shorter and cleaner way to define a function that we're going to use only once as an argument to another function
+
+prices = list(map(lambda item: item[1], items))
+print(prices)
+
+# above, map function takes a lambda functionand appies it to every item of this iterable
 
 
+#another scenario -> filter function
+
+filtered_prices = list(filter(lambda item: item[1] >=10, items))
+print(filtered_prices)
+
+prices = list(map(lambda item: item[1], items)) # first method
+filtered_prices = (list(map(lambda item: item[1] >= 10, items))) # second method
+
+best_prices = [item[1] for item in items] # <------------------- best method
+
+print(best_prices)
