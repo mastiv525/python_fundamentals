@@ -317,3 +317,30 @@ queue.append(2)
 queue.append(3)
 #removing intem from beggining
 queue.popleft()
+
+###closer look at tuples
+#tuple is READ ONLY LIST and we can use it to contain a sequence of objects but cannot modify
+
+point = (1, 2) + (3, 4)
+point_v2 = (1, 2) * 3
+
+print(point)
+print(point_v2)
+
+#converting list to tuple
+point = tuple([1, 2])
+point_v2 = tuple("Hello World")
+
+### swaping variables
+
+x = 10
+y = 12
+## basic method
+# z = x
+# x = y
+# y = z
+## best method
+
+x, y = y, x
+
+print(x, y)
