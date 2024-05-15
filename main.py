@@ -306,3 +306,14 @@ browsing_session.append(3)
 browsing_session.pop() #removing last item in stack
 if not browsing_session:
     browsing_session[-1] #get the item on top of the stack
+
+### queues      FIFO First In - First Out
+
+from collections import deque
+
+queue = deque([])
+queue.append(1)
+queue.append(2)
+queue.append(3)
+#removing intem from beggining
+queue.popleft()
