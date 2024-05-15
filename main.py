@@ -295,3 +295,14 @@ list2 = [10, 20, 30]
 print(list(zip(list1, list2)))
 #important
 print(list(zip("abc", list1, list2)))
+
+### stacks      LIFO Last In - First Out
+# we can use list object as a stack
+
+browsing_session = []
+browsing_session.append(1)
+browsing_session.append(2)
+browsing_session.append(3)
+browsing_session.pop() #removing last item in stack
+if not browsing_session:
+    browsing_session[-1] #get the item on top of the stack
