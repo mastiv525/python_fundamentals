@@ -286,4 +286,12 @@ best_filtered_prices = [item for item in items if item[1] >= 10]  # <-----------
 print(best_prices)
 print(best_filtered_prices)
 
+### zip function
 
+list1 = [1, 2, 3]
+list2 = [10, 20, 30]
+
+#combine two list where all items are tuples
+print(list(zip(list1, list2)))
+#important
+print(list(zip("abc", list1, list2)))
