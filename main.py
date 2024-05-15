@@ -277,9 +277,13 @@ print(prices)
 filtered_prices = list(filter(lambda item: item[1] >=10, items))
 print(filtered_prices)
 
-prices = list(map(lambda item: item[1], items)) # first method
-filtered_prices = (list(map(lambda item: item[1] >= 10, items))) # second method
+prices = list(map(lambda item: item[1], items)) # basic method
+filtered_prices = (list(map(lambda item: item[1] >= 10, items))) # basic method
 
 best_prices = [item[1] for item in items] # <------------------- best method
+best_filtered_prices = [item for item in items if item[1] >= 10]  # <------------------- best method
 
 print(best_prices)
+print(best_filtered_prices)
+
+
