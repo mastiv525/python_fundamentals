@@ -342,5 +342,26 @@ y = 12
 ## best method
 
 x, y = y, x
-
 print(x, y)
+
+### closer look at arrays and sets
+
+from array import array
+
+numbers = array("i", [1, 2, 3]) #https://docs.python.org/3/library/array.html
+# numbers.append()
+# numbers.pop()
+# numbers.insert()
+# numbers.remove()
+
+# set is collection with no duplicates
+
+numbers = [1, 1, 1, 2, 2, 3, 3, 3, 3]
+uniques = set(numbers)
+print(uniques)
+
+second = {1, 4}
+second.add(5)
+second.remove(5)
+len(second)
+
