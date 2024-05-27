@@ -356,12 +356,19 @@ numbers = array("i", [1, 2, 3]) #https://docs.python.org/3/library/array.html
 
 # set is collection with no duplicates
 
-numbers = [1, 1, 1, 2, 2, 3, 3, 3, 3]
-uniques = set(numbers)
+first_numbers = [1, 1, 1, 2, 2, 3, 3, 3, 3]
+uniques = set(first_numbers)
 print(uniques)
 
-second = {1, 4}
-second.add(5)
-second.remove(5)
-len(second)
+second_numbers = {1, 4, 8}
+second_numbers.add(5)
+second_numbers.remove(5)
+print(second_numbers)
+print(len(second_numbers))
 
+print(uniques | second_numbers) #this will return new set that includes all the items that are either in the first or in the second set
+print(uniques & second_numbers) #this will return new set that includes all the items that are both in first and second sets
+print(uniques - second_numbers) #this will return new set that includes all the items that are diffrent in this two sets
+print(uniques ^ second_numbers) #this will return new set that includes all the items that are either in the first or in the second set but not in the both
+
+# sets are an unordered collection so we cannot acces them using index
