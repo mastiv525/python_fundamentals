@@ -372,3 +372,22 @@ print(uniques - second_numbers) #this will return new set that includes all the 
 print(uniques ^ second_numbers) #this will return new set that includes all the items that are either in the first or in the second set but not in the both
 
 # sets are an unordered collection so we cannot acces them using index
+
+####        DICTIONARIES
+
+# dictionary is a collection of key value pairs that we use to map a key to value map - > przypisanie kluczowi wartości tak jak ksiazka adesowa
+# in python we can only use immutable types for the keys, value no limitations
+
+point = {"x": 1, "y": 2}
+point = dict(x=1, y=2)
+point["x"] = 10
+point["z"] = 20
+# methods to eliminate error
+if "a" in point:
+    print(point["a"])
+
+print(point.get("a", 0))
+
+del point["x"]
+print(point)
+
