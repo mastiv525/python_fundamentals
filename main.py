@@ -391,3 +391,13 @@ print(point.get("a", 0))
 del point["x"]
 print(point)
 
+# iterations over dicts
+
+for key in point:
+    print(key, point[key])
+
+for x in point.items():
+    print(x)
+
+for key, value in point.items():
+    print(key, value)
