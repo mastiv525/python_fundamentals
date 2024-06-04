@@ -401,3 +401,23 @@ for x in point.items():
 
 for key, value in point.items():
     print(key, value)
+
+# dictionary comperhensions
+
+#example
+
+values = []
+for i in range(5):
+    values.append(x * 2)
+
+print(values)
+# rewrite this to list comperhesion
+
+# [expression for item in items]
+
+values = [x * 2 for x in range(5)]
+
+#and change to dictionary comprehension
+
+values = {x: x * 2 for x in range(5)}
+print(values)
