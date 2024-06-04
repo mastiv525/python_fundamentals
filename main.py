@@ -421,3 +421,16 @@ values = [x * 2 for x in range(5)]
 
 values = {x: x * 2 for x in range(5)}
 print(values)
+
+### Generator Expressions -> they generate a new value in each iteration
+
+from sys import getsizeof
+
+values = (x * 2 for x in range(100000))
+print("gen:", getsizeof(values), "bytes of memory in usage")
+
+values = [x * 2 for x in range(100000)]
+print("list:", getsizeof(values), "bytes of memory in usage")
+
+# in situations when we dealing with a really large data set use generetor expession
+# which means ( ) brackets
