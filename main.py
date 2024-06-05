@@ -434,3 +434,41 @@ print("list:", getsizeof(values), "bytes of memory in usage")
 
 # in situations when we dealing with a really large data set use generetor expession
 # which means ( ) brackets
+
+### Unpacking Operator
+
+numbers = [1, 2, 3]
+
+print(*numbers) # exect same output
+print(1, 2, 3) # exect same output
+
+## cool tricks
+
+values = list(range(5))
+values = [*range(5), *"Hello"]
+print(values)
+# unpacking lists and strings
+first = [1, 2]
+second = [3]
+values = [*first, "a", *second, *"Hello"]
+print(*values)
+# unpacking dictionaries
+first = {"x": 1} # cool way to combine 2 dicts
+second = {"x": 10, "y": 2} # cool way to combine 2 dicts
+combined = {**first, **second, "z": 1} # cool way to combine 2 dicts
+print(combined)
+
+# very important exercise
+sentence = "This is a common interview question"
+
+char_list = {}
+
+for i in sentence:
+    if i in char_list:
+        char_list[i] += 1
+    else:
+        char_list[i] = 1
+print(char_list)
+
+print(sorted(char_list.items(), key=lambda kv:kv[1], reverse=True))
+
