@@ -487,10 +487,12 @@ print("Execution continues")
 # upgrade
 
 try:
+    file = open("C:/Users/Alan/Desktop/mosh/main.py")
     age = int(input("\nEnter your age: "))
     xfactor = 10 / age
 except (ValueError, ZeroDivisionError) as ex:
     print("You didn't enter a valid age")
 else:
     print("No exeptions were thrown")
-print("Execution continues")
+finally:
+    file.close()
