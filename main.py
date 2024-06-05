@@ -475,7 +475,7 @@ print(sorted(char_list.items(), key=lambda kv:kv[1], reverse=True))
 #### EXCEPTIONS
 
 try:
-    age = int(input("\nEnter your age: "))
+    #age = int(input("\nEnter your age: "))
 except ValueError as ex:
     print("You didn't enter a valid age")
     print(ex)
@@ -488,7 +488,7 @@ print("Execution continues")
 
 try:
     file = open("C:/Users/Alan/Desktop/mosh/main.py")
-    age = int(input("\nEnter your age: "))
+    #age = int(input("\nEnter your age: "))
     xfactor = 10 / age
 except (ValueError, ZeroDivisionError) as ex:
     print("You didn't enter a valid age")
@@ -496,3 +496,15 @@ else:
     print("No exeptions were thrown")
 finally:
     file.close()
+
+# raising exceptions
+
+def calculate_xfactor(age):
+    if age <= 0:
+        raise ValueError("\nAge cannot be 0 or less")
+    return 10 / age
+
+try:
+    calculate_xfactor(-5)
+except ValueError as error:
+    print(error)
