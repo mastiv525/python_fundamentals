@@ -472,3 +472,14 @@ print(char_list)
 
 print(sorted(char_list.items(), key=lambda kv:kv[1], reverse=True))
 
+#### EXEPTIONS
+
+try:
+    age = int(input("\nEnter your age: "))
+except ValueError as ex:
+    print("You didn't enter a valid age")
+    print(ex)
+    print(type(ex))
+else:
+    print("no exeptions were thrown")
+print("Execution continues")
