@@ -474,28 +474,28 @@ print(sorted(char_list.items(), key=lambda kv:kv[1], reverse=True))
 
 #### EXCEPTIONS
 
-try:
-    #age = int(input("\nEnter your age: "))
-except ValueError as ex:
-    print("You didn't enter a valid age")
-    print(ex)
-    print(type(ex))
-else:
-    print("no exeptions were thrown")
-print("Execution continues")
+# try:
+#     age = int(input("\nEnter your age: "))
+# except ValueError as ex:
+#     print("You didn't enter a valid age")
+#     print(ex)
+#     print(type(ex))
+# else:
+#     print("no exeptions were thrown")
+# print("Execution continues")
 
 # upgrade
 
-try:
-    file = open("C:/Users/Alan/Desktop/mosh/main.py")
-    #age = int(input("\nEnter your age: "))
-    xfactor = 10 / age
-except (ValueError, ZeroDivisionError) as ex:
-    print("You didn't enter a valid age")
-else:
-    print("No exeptions were thrown")
-finally:
-    file.close()
+# try:
+#     file = open("C:/Users/Alan/Desktop/mosh/main.py")
+#     age = int(input("\nEnter your age: "))
+#     xfactor = 10 / age
+# except (ValueError, ZeroDivisionError) as ex:
+#     print("You didn't enter a valid age")
+# else:
+#     print("No exeptions were thrown")
+# finally:
+#     file.close()
 
 # raising exceptions
 
@@ -508,3 +508,25 @@ try:
     calculate_xfactor(-5)
 except ValueError as error:
     print(error)
+
+############### CLASSES
+
+# Class: is a blueprint for creating new objects
+# Object: is a instance of a class
+
+# our point object need some initial values like x and y
+# to set these values we need a CONSTRUCTOR
+# __init__ is a magic method and its a CONSTRUCTOR and its executed when we create a new point object
+# !! self is a reference to current point object
+#
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def draw(self):
+        print(f"Point ({self.x, self.y})")
+
+
+point = Point(1, 2)
+point.draw()
