@@ -518,11 +518,17 @@ except ValueError as error:
 # to set these values we need a CONSTRUCTOR
 # __init__ is a magic method and its a CONSTRUCTOR and its executed when we create a new point object
 # !! self is a reference to current point object
-#
+# we can define attributes later in the code
 class Point:
+    default_color = "red"
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
+
+    @classmethod
+    def zero(cls):
+        return cls(0, 0)
 
     def draw(self):
         print(f"Point ({self.x, self.y})")
