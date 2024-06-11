@@ -533,10 +533,23 @@ class Point:
     def __str__(self):
         return f"({self.x}, {self.y})"
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+
     def draw(self):
         print(f"Point ({self.x, self.y})")
 
 
+
 point = Point(1, 2)
+point2 = Point(1, 2)
+point3 = Point(5, 6)
+point4 = Point(8, 10)
+
 point.draw()
 print(point)
+print(point == point2)
+print(point4 > point3)
