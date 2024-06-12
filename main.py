@@ -561,6 +561,7 @@ print(point == point2)
 print(point4 > point3)
 print(point2 + point3)
 
+# if you want to make certain attributes or certain methods in the class private use "__"
 
 class TagCloud:
     def __init__(self):
@@ -592,3 +593,21 @@ print(len(cloud))
 cloud["python"] = 10
 for tag in cloud:
     print(tag)
+
+class Product:
+    def __init__(self, price):
+        self.price = price
+
+    @property
+    def price(self):
+        return self.__price
+
+    @price.setter
+    def price(self, value):
+        if value < 0:
+            raise ValueError("Price cannot be negative")
+        self.__price = value
+
+
+product = Product(50)
+print(product.price)
