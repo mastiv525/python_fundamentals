@@ -614,14 +614,21 @@ print(product.price)
 
 ######## INHERITANCE
 
+# super daje dostep do atrybutów z najwyższej klasy
 class Animal:
     def __init__(self):
-        self.age = 1
+        print("Amimal Constructor")
+        self.age = 14
 
     def eat(self):
         print("eat")
 
 class Mammal(Animal):
+    def __init__(self):
+        super().__init__()
+        print("Mammal Constructor")
+        self.weight = 58
+
     def walk(self):
         print("walk")
 
@@ -632,3 +639,5 @@ class Fish(Animal):
 m = Mammal()
 m.eat()
 print(m.age)
+print(m.weight)
+
