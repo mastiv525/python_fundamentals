@@ -677,5 +677,31 @@ class MemoryStream(Stream):
     def read(self):
         print("Read")
 
-stream = Stream()
+stream = MemoryStream()
 stream.open()
+
+### Polymorphism
+
+from abc import ABC, abstractmethod
+
+class UIControl(ABC):
+    @abstractmethod
+    def draw(self):
+        pass
+
+class TextBox(UIControl):
+    def draw(self):
+        print("TextBox")
+
+class DropDownList(UIControl):
+    def draw(self):
+        print("DropDownList")
+
+def draw(UIcontrols):
+    for control in UIcontrols:
+        control.draw()
+
+ddl = DropDownList()
+textbox = TextBox()
+draw([ddl, textbox])
+
