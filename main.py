@@ -641,11 +641,13 @@ m.eat()
 print(m.age)
 print(m.weight)
 
+from abc import ABC, abstractmethod
+
 class InvalidOperationEror(Exception):
     pass
 
 
-class Stream:
+class Stream(ABC):
     def __init__(self):
         self.opened = False
 
@@ -659,6 +661,10 @@ class Stream:
             raise InvalidOperationEror("Stream is already closed.")
         self.opened = False
 
+    @abstractmethod
+    def read(self):
+        pass
+
 class FileStream(Stream):
     def read(self):
         print("Readind data from a file")
@@ -666,3 +672,10 @@ class FileStream(Stream):
 class NetworkStream(Stream):
     def read(self):
         print("Reading data from a network")
+
+class MemoryStream(Stream):
+    def read(self):
+        print("Read")
+
+stream = Stream()
+stream.open()
