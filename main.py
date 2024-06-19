@@ -705,3 +705,15 @@ ddl = DropDownList()
 textbox = TextBox()
 draw([ddl, textbox])
 
+class Text(str):
+    def duplicate(self):
+        return self + self
+
+
+class TrackableList(list):
+    def append(self, object):
+        print("Append called")
+        super(TrackableList, self).append(object)
+
+list_obj = TrackableList()
+list_obj.append("1")
