@@ -717,3 +717,12 @@ class TrackableList(list):
 
 list_obj = TrackableList()
 list_obj.append("1")
+
+# very good to use in classes that have only data and no methods you can use named tuple instead of classes
+from collections import namedtuple
+
+Point = namedtuple("Point", ["x", "y"])
+p1 = Point(x=1, y=2)
+p2 = Point(x=1, y=2)
+
+print(p1 == p2)
