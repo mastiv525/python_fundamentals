@@ -1,4 +1,3 @@
-
 #czesto na rekrutacjach
 
 def fizz_buzz(input):

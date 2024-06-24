@@ -1,4 +1,6 @@
 from pathlib import Path
+from time import ctime
+import shutil
 
 path = Path(r"python_fundamentals\fundamentals.py")
 print(path.exists())
@@ -20,3 +22,22 @@ py_files_r = [p for p in path.rglob("*.py")]
 print(paths)
 print(py_files)
 print(py_files_r)
+
+# files
+
+
+path = Path(r"C:\Users\Alan\Documents\GitHub\python_fundamentals\important.py")
+# path.exists()
+# path.rename("init.txt")
+# path.unlink()
+print(ctime(path.stat().st_ctime))
+
+print(path.read_text())
+# path.write_text("....")
+# path.write_bytes()
+
+
+source = Path(r"C:\Users\Alan\Documents\GitHub\python_fundamentals\important.py")
+target = Path() / "important.py"
+
+shutil.copy(source, target) #clean way to copy file
